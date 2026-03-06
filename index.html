@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body class="dark">
+<nav>
+    <div id="tab1" >
+            <img src="./images/favicon-32x32.png" alt="Classroom">
+            <a id="dropdown-btn" href="#">Class <span id="arrow">▾</span></a>
+                <ul id="dropdown-content1">
+                    <li><a href="https://classroom.google.com/u/1/?pli=1">Classroom</a></li>
+                    <li><a href="https://sites.google.com/a/pvlearners.net/authentication-portal/?pli=1&authuser=1">Auth Portal</a></li>
+                    <li><a href="https://west-mec.instructure.com/courses/2436">Canvas</a></li>
+                    <li><a href="https://paradisevalleyaz.infinitecampus.org/campus/portal/students/paradisevalley.jsp">Infinite Campus</a></li>
+                    <li><a href="https://www.codewars.com/dashboard">CodeWars</a></li>
+                    <li><a href="https://focus.west-mec.edu/focus/Modules.php?modname=misc%2FPortal.php">Focus</a></li>
+
+                </ul>
+            </li>
+        </div>
+        <div id="tab2" >
+            <img src="./images/laptop-32x32.png" alt="Gaming">
+            <a id="dropdown-btn2" href="#">Gaming<span id="arrow2">▾</span></a>
+                <ul id="dropdown-content2">
+                    <li><a href="https://store.steampowered.com/about/download.?gsc=1&gad_source=1&gad_campaignid=23267886476&gbraid=0AAAABBkoNjlmmQDT5D-luyrw6PvefEJ--&gclid=Cj0KCQiA8KTNBhD_ARIsAOvp6DI_51IJOhv0v-4P2Sk-QMF_Z0hLxRpY_yIuPrX-5qI2Z2GZp3ZvgtwaAtDNEALw_wcB">Steam</a></li>
+                    <li><a href="https://www.roblox.com/home">Roblox</a></li>
+                    <li><a href="https://www.coolmathgames.com/">Cool Math Games</a></li>
+                    <li><a href="https://store.epicgames.com/en-US">Epic Games</a></li>
+                    <li><a href="https://www.riotgames.com/en">Riot Games</a></li>
+                    <li><a href="https://www.friv.com/">Friv</a></li>
+
+                </ul>
+            </li>
+        </div>
+        <div id="tab3" >
+            <img src="./images/-32x32.png" alt="Personal">
+            <a id="dropdown-btn3" href="#">Personal<span id="arrow3">▾</span></a>
+                <ul id="dropdown-content3">
+                    <li><a href="https://store.steampowered.com/about/download.?gsc=1&gad_source=1&gad_campaignid=23267886476&gbraid=0AAAABBkoNjlmmQDT5D-luyrw6PvefEJ--&gclid=Cj0KCQiA8KTNBhD_ARIsAOvp6DI_51IJOhv0v-4P2Sk-QMF_Z0hLxRpY_yIuPrX-5qI2Z2GZp3ZvgtwaAtDNEALw_wcB">Steam</a></li>
+                    <li><a href="https://www.roblox.com/home">Roblox</a></li>
+                    <li><a href="https://www.coolmathgames.com/">Cool Math Games</a></li>
+                    <li><a href="https://store.epicgames.com/en-US">Epic Games</a></li>
+                    <li><a href="https://www.riotgames.com/en">Riot Games</a></li>
+                    <li><a href="https://www.friv.com/">Friv</a></li>
+
+                </ul>
+            </li>
+        </div>
+        <div id="tab4" >
+            <img src="./images/32x32.png" alt="Work">
+            <a id="dropdown-btn4" href="#">Work<span id="arrow4">▾</span></a>
+                <ul id="dropdown-content4">
+                    <li><a href="https://www.youtube.com/">YouTube</a></li>
+                    <li><a href="https://www.roblox.com/home">Roblox</a></li>
+                    <li><a href="https://www.coolmathgames.com/">Cool Math Games</a></li>
+                    <li><a href="https://store.epicgames.com/en-US">Epic Games</a></li>
+                    <li><a href="https://www.riotgames.com/en">Riot Games</a></li>
+                    <li><a href="https://www.friv.com/">Friv</a></li>
+
+                </ul>
+            </li>
+        </div>
+</nav>
+    <header id="mainHeader">
+        <h1 class="animatedHeader">Ben's Hub</h1>
+        <div id="date"></div>
+        <div id="clock"></div>
+    </header>
+    <main>
+        <div id="search_div">
+            <form action="https://www.google.com/search" method="GET" id="search_bar">
+                <input type="text" name="q" placeholder="Search Google...">
+            </form>
+        </div>
+        <div>
+            <h2 id="tagline">"Wish we could go to the moon together"</h2>
+            <iframe height="175" width="100%" title="Media player" src="https://embed.music.apple.com/us/album/i-really-want-to-stay-at-your-house/1540792622?i=1540793097&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1540793097&amp;theme=auto" id="MusicPlayer" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="border: 0px; border-radius: 12px; width: 100%; height: 175px; max-width: 350px; background-color: black;"></iframe>
+        </div>
+        <div id="themeDiv">            
+            <button id="themeButton1">Dark</button>
+            <button id="themeButton2">Neon</button>
+        </div>
+    </main>
+    <script src="./homepage.js"></script>
+</body>
+</html>
