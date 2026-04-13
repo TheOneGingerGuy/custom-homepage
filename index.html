@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben's Hub</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body class="dark">
+
+    <header id="mainHeader">
+        <h1 class="animatedHeader">Ben's Hub</h1>
+        <div id="date"></div>
+        <div id="clock"></div>
+    </header>
+
+    <main>
+        <div id="search_div">
+            <form action="https://www.google.com/search" method="GET" id="search_bar">
+                <input type="text" name="q" placeholder="Search Google...">
+                <button type="submit" id="search_btn">🔍</button>
+            </form>
+        </div>
+
+        <h2 id="tagline">"Wish we could go to the moon together"</h2>
+
+        <div id="nav-buttons">
+            <div class="nav-group">
+                <button class="nav-btn" id="navBtn1">📚 Class</button>
+                <div class="nav-dropdown" id="navDrop1">
+                    <a href="https://classroom.google.com/u/1/?pli=1">Classroom</a>
+                    <a href="https://sites.google.com/a/pvlearners.net/authentication-portal/?pli=1&authuser=1">Auth Portal</a>
+                    <a href="https://west-mec.instructure.com/courses/2436">Canvas</a>
+                    <a href="https://paradisevalleyaz.infinitecampus.org/campus/portal/students/paradisevalley.jsp">Infinite Campus</a>
+                    <a href="https://www.codewars.com/dashboard">CodeWars</a>
+                    <a href="https://focus.west-mec.edu/focus/Modules.php?modname=misc%2FPortal.php">Focus</a>
+                    <a href="https://github.com/">Github</a>
+                </div>
+            </div>
+            <div class="nav-group">
+                <button class="nav-btn" id="navBtn2">🎮 Gaming</button>
+                <div class="nav-dropdown" id="navDrop2">
+                    <a href="https://store.steampowered.com/about/">Steam</a>
+                    <a href="https://www.roblox.com/home">Roblox</a>
+                    <a href="https://www.coolmathgames.com/">Cool Math Games</a>
+                    <a href="https://store.epicgames.com/en-US">Epic Games</a>
+                    <a href="https://www.riotgames.com/en">Riot Games</a>
+                    <a href="https://www.friv.com/">Friv</a>
+                </div>
+            </div>
+            <div class="nav-group">
+                <button class="nav-btn" id="navBtn3">👤 Personal</button>
+                <div class="nav-dropdown" id="navDrop3">
+                    <a href="https://www.youtube.com/">YouTube</a>
+                    <a href="https://creditcards.wellsfargo.com/">Wells Fargo</a>
+                    <a href="https://www.crunchyroll.com/">Crunchyroll</a>
+                    <a href="https://music.apple.com/us/new">Apple Music</a>
+                    <a href="https://open.spotify.com/">Spotify</a>
+                    <a href="https://www.espn.com/nba/player/_/id/1966/lebron-james">Lebron James</a>
+                </div>
+            </div>
+            <div class="nav-group">
+                <button class="nav-btn" id="navBtn4">💼 Work</button>
+                <div class="nav-dropdown" id="navDrop4">
+                    <a href="https://www.ukg.com/products/ukg-pro">UKG Pro</a>
+                    <a href="https://www.arp-bolts.com/">ARP</a>
+                    <a href="https://documentify.com/generate-resignation-letter">2 Weeks Notice</a>
+                    <a href="https://www.tropicalsmoothiecafe.com/">Tropical Smoothie Cafe</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Recent Sites -->
+    <div id="recent-sites">
+        <h3 id="recent-title">⏱ Recently Visited</h3>
+        <ul id="recent-list"></ul>
+    </div>
+
+    <button id="recentToggleBtn">
+        <span>⏱</span>
+        <span>Recent</span>
+    </button>
+
+    <!-- Calendar Panel -->
+    <div id="cal-panel">
+        <div id="cal-header">
+            <button id="cal-prev">&#8249;</button>
+            <span id="cal-month-year"></span>
+            <button id="cal-next">&#8250;</button>
+        </div>
+        <div id="cal-grid">
+            <div class="cal-day-name">Sun</div>
+            <div class="cal-day-name">Mon</div>
+            <div class="cal-day-name">Tue</div>
+            <div class="cal-day-name">Wed</div>
+            <div class="cal-day-name">Thu</div>
+            <div class="cal-day-name">Fri</div>
+            <div class="cal-day-name">Sat</div>
+        </div>
+        <div id="cal-events">
+            <div id="cal-events-title">📌 Events</div>
+            <ul id="cal-events-list"></ul>
+            <div id="cal-event-input-row">
+                <input type="date" id="cal-event-date">
+                <input type="text" id="cal-event-text" placeholder="Event name...">
+                <button id="cal-event-add">+</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Music Panel -->
+    <div id="musicPanel">
+        <iframe
+            title="Media player"
+            src="https://embed.music.apple.com/us/album/i-really-want-to-stay-at-your-house/1540792622?i=1540793097&itscg=30200&itsct=music_box_player&ls=1&app=music&mttnsubad=1540793097&theme=auto"
+            id="MusicPlayer"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+            allow="autoplay *; encrypted-media *; clipboard-write"
+            style="border: 0; border-radius: 12px; width: 350px; height: 175px; background-color: black; display: block;">
+        </iframe>
+    </div>
+
+    <!-- Bottom Button Bar -->
+    <div id="bottom-btn-bar">
+        <button id="musicToggleBtn">
+            <span class="music-icon">♪</span>
+            <span class="btn-label">Music</span>
+        </button>
+        <button id="todoToggleBtn">
+            <span>📝</span>
+            <span class="todo-label">Tasks</span>
+        </button>
+        <button id="notesToggleBtn">
+            <span>🗒️</span>
+            <span>Notes</span>
+        </button>
+        <button id="calToggleBtn">
+            <span>📅</span>
+            <span>Calendar</span>
+        </button>
+        <button id="calcToggleBtn">
+            <span>🔢</span>
+            <span>Calc</span>
+        </button>
+    </div>
+
+    <!-- To-Do Panel -->
+    <div id="todo-panel">
+        <h3 id="todo-title">📝 To-Do</h3>
+        <div id="todo-input-row">
+            <input type="text" id="todo-input" placeholder="Add a task...">
+            <button id="todo-add-btn">+</button>
+        </div>
+        <ul id="todo-list"></ul>
+    </div>
+
+
+    <!-- Notes Panel -->
+    <div id="notes-panel">
+        <h3 id="notes-title">🗒️ Notes</h3>
+        <textarea id="notes-input" placeholder="Write something..."></textarea>
+        <div id="notes-footer">Auto-saved</div>
+    </div>
+
+
+    <!-- Settings Button -->
+    <button id="settingsBtn">⚙️</button>
+
+    <!-- Settings Modal -->
+    <div id="settings-overlay"></div>
+    <div id="settings-modal">
+        <div id="settings-header">
+            <span id="settings-title">⚙️ Settings</span>
+            <button id="settings-close">✕</button>
+        </div>
+
+        <div id="settings-body">
+            <h3 class="settings-section-title">Theme</h3>
+            <div id="settings-theme-row">
+                <span class="theme-label active" id="darkLabel">Dark</span>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <div class="switch-track"></div>
+                    <div class="switch-knob"></div>
+                </label>
+                <span class="theme-label" id="neonLabel">Neon</span>
+            </div>
+
+            <h3 class="settings-section-title">Visible Buttons</h3>
+            <div id="settings-buttons-list">
+                <label class="settings-toggle-row"><input type="checkbox" class="btn-visibility" data-target="musicToggleBtn" checked><span>♪ Music</span></label>
+                <label class="settings-toggle-row"><input type="checkbox" class="btn-visibility" data-target="todoToggleBtn" checked><span>📝 Tasks</span></label>
+                <label class="settings-toggle-row"><input type="checkbox" class="btn-visibility" data-target="notesToggleBtn" checked><span>🗒️ Notes</span></label>
+                <label class="settings-toggle-row"><input type="checkbox" class="btn-visibility" data-target="calToggleBtn" checked><span>📅 Calendar</span></label>
+                <label class="settings-toggle-row"><input type="checkbox" class="btn-visibility" data-target="recentToggleBtn" checked><span>⏱ Recent</span></label>
+                <label class="settings-toggle-row"><input type="checkbox" class="btn-visibility" data-target="calcToggleBtn" checked><span>🔢 Calculator</span></label>
+            </div>
+
+            <h3 class="settings-section-title">Add Link to Navbar</h3>
+            <div id="settings-add-row">
+                <select id="settings-category">
+                    <option value="0">📚 Class</option>
+                    <option value="1">🎮 Gaming</option>
+                    <option value="2">👤 Personal</option>
+                    <option value="3">💼 Work</option>
+                </select>
+                <input type="text" id="settings-link-name" placeholder="Name (e.g. Reddit)">
+                <input type="url" id="settings-link-url" placeholder="URL (e.g. https://reddit.com)">
+                <button id="settings-add-btn">+ Add</button>
+            </div>
+
+            <h3 class="settings-section-title">Manage Links</h3>
+            <div id="settings-link-list"></div>
+        </div>
+    </div>
+
+    <!-- Calculator Panel -->
+    <div id="calc-panel">
+        <div id="calc-display-wrap">
+            <div id="calc-expression"></div>
+            <div id="calc-display">0</div>
+        </div>
+        <div id="calc-buttons">
+            <button class="calc-btn calc-wide calc-fn" data-action="clear">AC</button>
+            <button class="calc-btn calc-fn" data-action="sign">+/−</button>
+            <button class="calc-btn calc-fn" data-action="percent">%</button>
+            <button class="calc-btn calc-op" data-action="op" data-val="/">÷</button>
+
+            <button class="calc-btn" data-action="num" data-val="7">7</button>
+            <button class="calc-btn" data-action="num" data-val="8">8</button>
+            <button class="calc-btn" data-action="num" data-val="9">9</button>
+            <button class="calc-btn calc-op" data-action="op" data-val="*">×</button>
+
+            <button class="calc-btn" data-action="num" data-val="4">4</button>
+            <button class="calc-btn" data-action="num" data-val="5">5</button>
+            <button class="calc-btn" data-action="num" data-val="6">6</button>
+            <button class="calc-btn calc-op" data-action="op" data-val="-">−</button>
+
+            <button class="calc-btn" data-action="num" data-val="1">1</button>
+            <button class="calc-btn" data-action="num" data-val="2">2</button>
+            <button class="calc-btn" data-action="num" data-val="3">3</button>
+            <button class="calc-btn calc-op" data-action="op" data-val="+">+</button>
+
+            <button class="calc-btn calc-wide" data-action="num" data-val="0">0</button>
+            <button class="calc-btn" data-action="decimal">.</button>
+            <button class="calc-btn calc-eq" data-action="equals">=</button>
+        </div>
+    </div>
+
+    <div id="greeting-popup"></div>
+
+    <script src="./homepage.js"></script>
+</body>
+</html>
